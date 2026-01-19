@@ -1,4 +1,4 @@
-name: "Build Postgres Image With pg_partman"
+name: "Build and release"
 on:
   release:
     types: [released]
