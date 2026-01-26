@@ -1,4 +1,4 @@
-name: "Build and release"
+name: "Build and release Docker image"
 on:
   release:
     types: [released]
@@ -27,7 +27,7 @@ jobs:
       - name: Prepare
         run: |
           platform=${{ matrix.platform.version }}
-          echo "PLATFORM_PAIR=${platform//\//-}" $GITHUB_ENV
+          echo "PLATFORM_PAIR=${platform//\//-}" >> $GITHUB_ENV
       - uses: actions/checkout@v4
         with:
           submodules: true
